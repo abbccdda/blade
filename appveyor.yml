@@ -1,5 +1,11 @@
-install:
-  - mvn clean install
+hosts:
+  localhost: 127.0.0.1
+
+install: 
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+cache:
+  - 'C:\Users\%USERNAME%\.m2\repository'
 
 test_script:
   - mvn test 
