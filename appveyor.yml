@@ -2,12 +2,9 @@ hosts:
   localhost: 127.0.0.1
 
 install: 
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn install -Dmaven.test.skip=true
 
 cache:
   - 'C:\Users\%USERNAME%\.m2\repository'
-
-test_script:
-  - mvn test 
 
 build: off

@@ -31,15 +31,15 @@ public class BladeTest {
 	
 	@Test
 	public void testCode404() throws Exception {
-//		Blade blade = Blade.$();
-//		blade.startNoJoin(BladeTest.class);
-//		try {
-//			Thread.sleep(100);
-//			int resCode = HttpRequest.get("http://127.0.0.1:9000/hello").code();
-//			Assert.assertEquals(resCode, 404);
-//		} finally {
-//			blade.embedServer().shutdown();
-//		}
+		Blade blade = Blade.$();
+		blade.startNoJoin(BladeTest.class);
+		try {
+			Thread.sleep(100);
+			int resCode = HttpRequest.get("http://127.0.0.1:9000/hello").code();
+			Assert.assertEquals(resCode, 404);
+		} finally {
+			blade.embedServer().shutdown();
+		}
 	}
 	
 	@Test
